@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JK Events</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div>
+        <h1 class="navbar__title">jk events</h1>
+      </div>
+      <ul class="navlinks">
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Schedule</li>
+        <li>Reviews</li>
+        <li>Contact Us</li>
+      </ul>
+    </nav>
+    <main class="container">
+      <h1 class="container__title">Make your events memorable</h1>
+      <p class="container__description">
+        Organizing events doesn’t have to be stressful, You’re one step away
+        from working with our well-trained and experienced personnel.
+      </p>
+      <button class="container__button" href="#">Contact</button>
+    </main>
+    <script>
+      let navlinks = document.querySelector("li");
+      let clickableTitle = document.querySelector('.navbar__title')
+      navlinks.addEventListener("click", () => {
+        if (navlinks.classList.contains("active")) {
+          navlinks.classList.add("active");
+        }
+        navlinks.classList.remove("active");
+      });
+
+      clickableTitle.addEventListener('click', () => {
+        document.body.classList.toggle('body-dark');
+        window.alert('You just entered the dark side')
+      })
+    </script>
+  </body>
+</html>

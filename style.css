@@ -1,0 +1,166 @@
+:root{
+  --btn-color: #7d3505;
+  --box-shadow: inset 0 0 0 0 #7d3505;
+  --button-color: #7d3505;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+  list-style: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(
+      rgba(125, 53, 0, 0.73),
+      rgba(125, 53, 5, 0.73)
+    ),
+    url(./background.webp);
+  transition: 2s background-image ease-in-out;
+  background-repeat: no-repeat;
+  box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.25);
+  background-size: cover;
+  color: white;
+}
+
+.body-dark{
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.73),
+      rgba(0, 0, 0, 0.73)
+    ),
+    url(./background.webp);
+    --button-color: black;
+    --btn-color: orange;
+    --box-shadow: inset 0 0 0 0 #000000;
+    --box-shadow-hover: inset 300px 0 0 0 #000000;
+}
+
+.navbar {
+  display: flex;
+  position: relative;
+  animation: slideDown 1.6s forwards ease-in-out;
+}
+
+.navbar__title {
+  text-transform: uppercase;
+  margin-block-start: 0.7em;
+  margin-inline-start: 2em;
+  color: white;
+  -webkit-text-stroke: 0.01em white;
+  transition: .2s ease-in-out;
+}
+.navlinks {
+  display: flex;
+  position: absolute;
+  right: 0;
+  gap: 5em;
+  margin-inline-end: 5em;
+  margin-block-start: 1.5em;
+}
+
+.container {
+  text-align: center;
+  margin: 14em auto;
+}
+
+.container__title {
+  font-size: 2.9rem;
+  animation-delay: 4s;
+  animation: moveUpTitle 2s forwards ease-in-out;
+}
+
+.container__description {
+  margin-block-start: 2em;
+  line-height: 1.9;
+  padding-inline: 44em;
+  font-weight: 300;
+  animation-delay: 2s;
+  animation: moveUpDescription 2s forwards ease-in-out;
+}
+
+.container__button {
+  background-color: white;
+  border-radius: 2em;
+  padding-inline: 3em;
+  padding-block: 1em;
+  font-size: 0.9rem;
+  font-family: "Poppins";
+  text-align: center;
+  font-weight: 600;
+  color: var(--button-color);
+  transition: box-shadow ease-out 0.3s;
+  box-shadow: var(--box-shadow);
+  animation: moveUpButton 2s ease-in-out;
+}
+
+.active{
+  border-top: 4px solid currentColor;
+}
+
+.navlinks li{
+  border: none;
+  transition: 400ms ease;
+}
+.navlinks li:hover {
+  border-top: 4px solid currentColor;
+}
+
+.container__button:hover {
+ box-shadow: var(--box-shadow-hover);
+ color: white;
+}
+
+.navbar__title:hover {
+  -webkit-text-stroke: 0.02em white;
+  color: transparent;
+}
+
+@keyframes moveUpTitle {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes moveUpDescription {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes moveUpButton {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(auto);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(25%);
+  }
+}
+
