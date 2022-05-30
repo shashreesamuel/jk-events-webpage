@@ -34,20 +34,11 @@
       </p>
       <button class="container__button" href="#">Contact</button>
     </main>
-    <script>
-      let navlinks = document.querySelector("li");
-      let clickableTitle = document.querySelector('.navbar__title')
-      navlinks.addEventListener("click", () => {
-        if (navlinks.classList.contains("active")) {
-          navlinks.classList.add("active");
-        }
-        navlinks.classList.remove("active");
-      });
-
-      clickableTitle.addEventListener('click', () => {
-        document.body.classList.toggle('body-dark');
-        window.alert('You just entered the dark side')
-      })
-    </script>
+    <script src="./script.js"></script>
+    <footer>
+      <div>
+        &copy; Design by Michael | All Rights Reserved
+      </div>
+    </footer>
   </body>
 </html>
